@@ -4,7 +4,6 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  base: "/eng-software-studies/",
   site: "https://eufelipe.github.io/eng-software-studies",
   integrations: [
     starlight({
