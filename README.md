@@ -1,19 +1,20 @@
-# Mastering Design Patterns
+# Guia de Estudos de Princípios e Padrões de Software
 
-This repository is a personal project dedicated to the study and understanding of some of the most popular design patterns used in frontend and backend development.
+Este repositório contém meu guia pessoal para estudar e aplicar princípios de design de software, como **SOLID**, **Design Patterns**, e **Arquitetura de Software**. 
 
-## Overview
+## Estrutura
 
-Design patterns are essential tools for software developers, as they provide reusable solutions to common problems and challenges in software design. In this repository, I aim to explore a variety of patterns, highlighting their applicability in different contexts and technologies as part of my continuous learning.
+- **apps/docs**: Documentação escrita usando [Astro](https://astro.build/) com o tema [Starlight](https://starlight.astro.build/).
+- **packages/**: Exemplos práticos que acompanham os tópicos estudados na documentação.
 
-## Purpose
+## Documentação
 
-The purpose of this repository is to deepen my knowledge of design patterns, document practical examples, and understand how to effectively apply these patterns in real projects. I hope it serves as a useful reference for both myself and other developers interested in enhancing their skills.
+A documentação completa pode ser acessada [aqui](https://eufelipe.github.io/eng-software-studies).
 
-## Contribution
+## Como Contribuir
 
-This is a personal study project, but contributions are always welcome! If you have ideas, improvements, or want to add new patterns, feel free to open an issue or submit a pull request.
+Se você encontrar algo que gostaria de melhorar ou expandir, sinta-se à vontade para abrir um pull request ou uma issue.
 
-## License
+## Licença
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
