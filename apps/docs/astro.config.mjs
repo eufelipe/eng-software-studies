@@ -4,8 +4,8 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  base: "/eng-software-studies/",
-  site: "https://eufelipe.github.io/eng-software-studies",
+  base: "eng-software-studies",
+  site: "https://eufelipe.github.io",
   integrations: [
     starlight({
       title: "Guia de Estudos de Princípios e Padrões de Software",
