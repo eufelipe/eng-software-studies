@@ -168,13 +168,13 @@ Neste exemplo, a classe `DiscountCalculator` viola o OCP. A cada novo tipo de de
 Vamos refatorar para seguir o OCP:
 
 ```typescript
-interface DiscountStrategy {
+interface IDiscountStrategy {
   calculateDiscount(purchaseAmount: number): number;
 }
 ```
 
 ```typescript
-class RegularDiscountStrategy implements DiscountStrategy {
+class RegularDiscountStrategy implements IDiscountStrategy {
   calculateDiscount(purchaseAmount: number): number {
     return purchaseAmount * 0.1;
   }
@@ -182,7 +182,7 @@ class RegularDiscountStrategy implements DiscountStrategy {
 ```
 
 ```typescript
-class PremiumDiscountStrategy implements DiscountStrategy {
+class PremiumDiscountStrategy implements IDiscountStrategy {
   calculateDiscount(purchaseAmount: number): number {
     return purchaseAmount * 0.15;
   }
@@ -190,7 +190,7 @@ class PremiumDiscountStrategy implements DiscountStrategy {
 ```
 
 ```typescript
-class VIPDiscountStrategy implements DiscountStrategy {
+class VIPDiscountStrategy implements IDiscountStrategy {
   calculateDiscount(purchaseAmount: number): number {
     return purchaseAmount * 0.2;
   }
@@ -199,7 +199,7 @@ class VIPDiscountStrategy implements DiscountStrategy {
 
 ```typescript
 class DiscountCalculator {
-  constructor(private strategy: DiscountStrategy) {}
+  constructor(private strategy: IDiscountStrategy) {}
 
   calculateDiscount(purchaseAmount: number): number {
     return this.strategy.calculateDiscount(purchaseAmount);
@@ -218,7 +218,7 @@ const vipCalculator = new DiscountCalculator(new VIPDiscountStrategy());
 console.log(vipCalculator.calculateDiscount(100)); // 20
 
 // Adicionando um novo tipo de desconto sem modificar o código existente
-class SuperVIPDiscountStrategy implements DiscountStrategy {
+class SuperVIPDiscountStrategy implements IDiscountStrategy {
   calculateDiscount(purchaseAmount: number): number {
     return purchaseAmount * 0.25;
   }
