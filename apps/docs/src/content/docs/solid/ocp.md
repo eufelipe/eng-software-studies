@@ -241,7 +241,7 @@ O Princípio Aberto/Fechado também pode ser aplicado em programação funcional
 
 type DataType = 'json' | 'csv' | 'xml';
 
-const processData = (data: any[], type: DataType) => {
+const processData = (data: string[][], type: DataType) => {
   if (type === "json") {
     return JSON.stringify(data);
   } else if (type === "csv") {
@@ -259,8 +259,9 @@ Exemplo de uso:
 ```typescript
 const data = [
   ["name", "age"],
-  ["John", 25],
-  ["Jane", 30],
+  ["João das Couves", "30"],
+  ["Fulano de Tal", "40"],
+  ["Ciclano Beltrano", "25"],
 ];
 
 console.log(processData(data, "json"));
@@ -279,7 +280,7 @@ Vamos refatorar para seguir o OCP:
 ```typescript
 // Definindo uma interface para os processadores de dados
 interface DataProcessor {
-  (data: any[]): string;
+  (data: string[][]): string;
 }
 
 // Funções processadoras específicas
@@ -291,7 +292,7 @@ const xmlProcessor: DataProcessor = (data) =>
   data.map((row) => `<row>${row.join("")}</row>`).join("");
 
 // Função processData que segue o OCP
-const processData = (data: any[], processor: DataProcessor): string => {
+const processData = (data: string[][], processor: DataProcessor): string => {
   return processor(data);
 };
 ```
@@ -301,8 +302,9 @@ Exemplo de uso:
 ```typescript
 const data = [
   ["name", "age"],
-  ["John", 25],
-  ["Jane", 30],
+  ["João das Couves", "30"],
+  ["Fulano de Tal", "40"],
+  ["Ciclano Beltrano", "25"],
 ];
 
 console.log(processData(data, jsonProcessor)); // JSON
