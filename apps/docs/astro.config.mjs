@@ -1,13 +1,15 @@
 import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV === "production";
 
 // https://astro.build/config
 export default defineConfig({
   output: "static",
   base: isProduction ? "/eng-software-studies" : undefined,
-  site: isProduction ? "https://eufelipe.github.io/eng-software-studies" : undefined,
+  site: isProduction
+    ? "https://eufelipe.github.io/eng-software-studies"
+    : undefined,
   integrations: [
     starlight({
       title: "Guia de Estudos de Princípios e Padrões de Software",
@@ -22,24 +24,24 @@ export default defineConfig({
           ],
         },
         {
-          label: "Fundamentos de SOLID",
+          label: "Princípios SOLID",
           items: [
             { label: "Por que SOLID?", slug: "solid/why-solid" },
             {
-              label: "1. SRP - Princípio da Responsabilidade Única",
+              label: "SRP - Princípio da Responsabilidade Única",
               slug: "solid/srp",
             },
-            { label: "Princípio Aberto/Fechado (OCP)", slug: "solid/ocp" },
+            { label: "OCP - Princípio Aberto/Fechado", slug: "solid/ocp" },
             {
-              label: "Princípio da Substituição de Liskov (LSP)",
+              label: "LSP - Princípio da Substituição de Liskov",
               slug: "solid/lsp",
             },
             {
-              label: "Princípio da Segregação de Interfaces (ISP)",
+              label: "ISP - Princípio da Segregação de Interfaces",
               slug: "solid/isp",
             },
             {
-              label: "Princípio da Inversão de Dependência (DIP)",
+              label: "DIP - Princípio da Inversão de Dependência",
               slug: "solid/dip",
             },
           ],

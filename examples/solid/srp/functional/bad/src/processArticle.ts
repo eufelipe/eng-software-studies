@@ -1,18 +1,20 @@
-const processArticle = (article) => {
+import { TArticle } from "./types";
+
+export const processArticle = (article: TArticle): TArticle => {
   // Validation
   if (!article.title || article.title.length < 5) {
-    throw new Error('Title is too short');
+    throw new Error("Title is too short");
   }
   if (!article.content || article.content.length < 100) {
-    throw new Error('Content is too short');
+    throw new Error("Content is too short");
   }
 
   // Formatting
-  const formattedTitle = article.title.toLowerCase().replace(/\s+/g, '-');
-  const formattedContent = article.content.replace(/\n/g, '<br>');
+  const formattedTitle = article.title.toLowerCase().replace(/\s+/g, "-");
+  const formattedContent = article.content.replace(/\n/g, "<br>");
 
   // Save to database
-  const id = Math.random().toString(36).substr(2, 9);
+  const id = Math.random().toString(36).slice(2, 11);
   console.log(`Saving article with ID ${id} to database`);
 
   // Notify authors
@@ -23,6 +25,6 @@ const processArticle = (article) => {
     title: formattedTitle,
     content: formattedContent,
     author: article.author,
-    publicationDate: new Date()
+    publicationDate: new Date(),
   };
 };
