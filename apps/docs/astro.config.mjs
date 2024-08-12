@@ -1,11 +1,13 @@
 import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  base: "/eng-software-studies",
-  site: "https://eufelipe.github.io/eng-software-studies",
+  base: isProduction ? "/eng-software-studies" : undefined,
+  site: isProduction ? "https://eufelipe.github.io/eng-software-studies" : undefined,
   integrations: [
     starlight({
       title: "Guia de Estudos de Princípios e Padrões de Software",
@@ -24,7 +26,7 @@ export default defineConfig({
           items: [
             { label: "Por que SOLID?", slug: "solid/why-solid" },
             {
-              label: "Princípio da Responsabilidade Única (SRP)",
+              label: "1. SRP - Princípio da Responsabilidade Única",
               slug: "solid/srp",
             },
             { label: "Princípio Aberto/Fechado (OCP)", slug: "solid/ocp" },
