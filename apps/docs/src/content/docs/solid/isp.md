@@ -131,7 +131,7 @@ type FinancialProcessor = {
 const financialProcessor: FinancialProcessor = {
     calculateTax: (income) => income * 0.2,
     calculateDiscount: (amount) => amount * 0.1,
-    generateInvoice: (amount) => Invoice for $${amount}
+    generateInvoice: (amount) => `Invoice for ${amount}`
 };
 ```
 
@@ -165,7 +165,7 @@ const discountCalculator: DiscountCalculator = {
 };
 
 const invoiceGenerator: InvoiceGenerator = {
-    generateInvoice: (amount) => Invoice for $${amount}
+    generateInvoice: (amount) => `Invoice for ${amount}`,
 };
 ```
 
