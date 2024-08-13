@@ -5,7 +5,8 @@ Este repositório contém meu guia pessoal para estudar e aplicar princípios de
 ## Estrutura
 
 - **apps/docs**: Documentação escrita usando [Astro](https://astro.build/) com o tema [Starlight](https://starlight.astro.build/).
-- **packages/**: Exemplos práticos que acompanham os tópicos estudados na documentação.
+- **examples/**: Exemplos práticos que acompanham os tópicos estudados na documentação.
+- **packages/**: Pacotes de código reutilizável que podem ser usados em diferentes projetos.
 
 ## Documentação
 
