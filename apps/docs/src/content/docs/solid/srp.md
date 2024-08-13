@@ -270,5 +270,3 @@ No exemplo refatorado, cada classe agora tem uma responsabilidade única, tornan
 ## Conclusão
 
 O Princípio da Responsabilidade Única é fundamental para a criação de software modular, coeso e fácil de manter. Ao aplicar o SRP, você torna seu código mais robusto, facilitando não apenas o desenvolvimento, mas também a evolução e manutenção do sistema ao longo do tempo. Esse princípio é uma base sólida para a implementação dos demais princípios SOLID e para a prática de boas arquiteturas de software.
-
-Vamos explorar o próximo princípio SOLID?

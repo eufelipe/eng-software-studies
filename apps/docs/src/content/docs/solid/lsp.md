@@ -316,4 +316,4 @@ O Princípio da Substituição de Liskov é crucial para garantir que subclasses
 
 Seguir o Princípio da Substituição de Liskov garante que seu código seja flexível, fácil de manter e menos propenso a bugs inesperados. Ao aderir ao LSP, você assegura que as classes e funções podem ser substituídas de maneira previsível, promovendo a reutilização segura de componentes e facilitando a evolução do sistema ao longo do tempo.
 
-Vamos explorar o próximo princípio SOLID?
+ 
